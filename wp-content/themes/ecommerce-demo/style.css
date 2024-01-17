@@ -1,0 +1,154 @@
+/*
+Theme Name: E-Commerce Demo
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+a {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme("borderColor.DEFAULT", currentColor);
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .faded-out {
+    transform: translateY(90px);
+    opacity: 0;
+    transition: opacity 0.7s, transform 0.7s;
+  }
+
+  .faded-in {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.7s, transform 0.7s;
+  }
+}
+
+@media (max-width: 767px) {
+  .faded-out-left {
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: opacity 0.15s ease-in, transform 0.15s ease-in;
+  }
+
+  .faded-in-left {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  }
+}
+
+header a {
+  text-decoration: none !important;
+}
+
+.mobile-nav-show {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(55, 65, 81);
+  padding-top: 20vh;
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+.mobile-nav-show > div > ul {
+  flex-direction: column;
+}
+
+/* Mobile hamburger menu */
+.bar1,
+.bar2,
+.bar3 {
+  width: 36px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* Rotate first bar */
+.change.bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change.bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change.bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+html {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  font-family: Raleway;
+  height: 100%;
+}
+
+header {
+  background: #37415169;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li:last-child {
+  border: solid white 2px;
+  border-radius: 8px;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
