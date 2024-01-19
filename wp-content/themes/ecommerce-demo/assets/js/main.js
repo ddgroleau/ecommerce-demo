@@ -1,5 +1,14 @@
 const $ = (element) => document.querySelector(element);
 
+function getElementOffset(element) {
+  let offsetTop = 0;
+  while (element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return offsetTop;
+}
+
 // Window Dependencies
 document.addEventListener("DOMContentLoaded", () => {
   // Fade in on Scroll
@@ -51,13 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   navToggle.addEventListener("click", toggleNav);
-});
 
-function getElementOffset(element) {
-  let offsetTop = 0;
-  while (element) {
-    offsetTop += element.offsetTop;
-    element = element.offsetParent;
+  /* Cart */
+
+  // Add loading animation to 'Add to Cart' buttons
+  if ($(".products__container")) {
+    $(".products__container").addEventListener("click", (event) => {
+      if (event.target.textContent.toLowerCase().endsWith("cart")) {
+        event.target.innerHTML = '<span class="spinner"></span>';
+      }
+    });
   }
-  return offsetTop;
-}
+});
