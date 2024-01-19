@@ -71,4 +71,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* Product Page */
+
+  if ($(".product__container")) {
+    $(".woocommerce-product-gallery__wrapper").addEventListener(
+      "click",
+      (event) => {
+        if (event.target.classList.contains("wp-post-image")) {
+          return;
+        } else if (event.target.tagName.toLowerCase() === "img") {
+          const target = $(".wp-post-image");
+          const source = event.target;
+
+          const tgtSrc = target.src;
+          const tgtSrcSet = target.srcset;
+
+          const srcSrc = source.src;
+          const srcSrcSet = source.srcset;
+
+          target.src = srcSrc;
+          target.srcset = srcSrcSet;
+
+          source.src = tgtSrc;
+          source.srcset = tgtSrcSet;
+
+          event.preventDefault();
+        }
+      }
+    );
+  }
 });

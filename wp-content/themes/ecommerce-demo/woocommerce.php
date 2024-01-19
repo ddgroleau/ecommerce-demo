@@ -1,9 +1,9 @@
 <?php get_header() ?>
-<main class="flex flex-grow flex-col">
+<main class="flex flex-grow flex-col bg-white">
     <?php if(str_ends_with($_SERVER['REQUEST_URI'],"/products/")) : ?>
 
     <!-- Start of 'Products' Landing -->
-    <section class="lg:flex lg:justify-center pt-24 px-4 lg:pt-32 max-w-screen-2xl mx-auto">
+    <section class="lg:flex lg:justify-center pt-24 px-4 lg:pt-40 max-w-screen-2xl mx-auto">
         <div class="lg:w-1/2">
             <h1 class="text-xs lg:text-base uppercase font-bold mb-3 lg:mb-6 text-gray-400">Products</h1>
             <p class="font-semibold text-3xl lg:text-5xl max-w-prose text-gray-700">Revolutionary comfort
@@ -67,7 +67,7 @@
     </section>
     <?php endif; ?>
 
-    <section class="flex flex-col w-full px-8 py-16 md:items-center products__container">
+    <section class="flex flex-col w-full px-8 py-16 md:items-center products__container fade-in-out-on-scroll">
         <?php woocommerce_content() ?>
     </section>
 

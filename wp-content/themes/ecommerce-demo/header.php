@@ -17,9 +17,9 @@
 <body class="flex flex-col min-h-screen max-w-screen w-screen h-full overflow-x-hidden bg-blue-50">
     <!-- Start of header -->
     <header class="fixed w-full z-50">
-        <nav class="max-w-screen-2xl flex flex-row flex-wrap justify-between my-3 ml-auto mr-auto " role="navigation">
+        <nav class="px-4 md:px-16 flex flex-row flex-wrap justify-between my-3 ml-auto mr-auto " role="navigation">
             <!-- COMPANY LOGO (SVG) -->
-            <div class="flex items-center justify-between text-white ml-3 w-full">
+            <div class="flex items-center justify-between text-white -ml-4 md:-ml-0 w-full">
                 <a href="/">
                     <svg class="h-6 lg:h-8" width="183" height="32" viewBox="0 0 183 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
