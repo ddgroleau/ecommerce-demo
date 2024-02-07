@@ -544,16 +544,12 @@
   max-width: 1536px
 }
 
-.max-w-screen-md {
-  max-width: 768px
+.max-w-screen-lg {
+  max-width: 1024px
 }
 
 .max-w-screen-xl {
   max-width: 1280px
-}
-
-.max-w-screen-lg {
-  max-width: 1024px
 }
 
 .flex-shrink {
@@ -1774,10 +1770,6 @@
   padding-bottom: 24rem
 }
 
-.pl-12 {
-  padding-left: 3rem
-}
-
 .pl-4 {
   padding-left: 1rem
 }
@@ -2470,6 +2462,10 @@
     margin-left: -0px
   }
 
+  .md\:mt-0 {
+    margin-top: 0px
+  }
+
   .md\:block {
     display: block
   }
@@ -2510,6 +2506,10 @@
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem
+  }
+
+  .md\:pl-12 {
+    padding-left: 3rem
   }
 
   .md\:pr-4 {
@@ -2554,10 +2554,6 @@
 
   .lg\:mt-24 {
     margin-top: 6rem
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem
   }
 
   .lg\:flex {
@@ -2616,6 +2612,11 @@
     padding-right: 2.5rem
   }
 
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem
+  }
+
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem
@@ -2624,11 +2625,6 @@
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem
   }
 
   .lg\:pb-0 {
@@ -2688,16 +2684,6 @@
 @media (min-width: 1280px) {
   .xl\:max-w-md {
     max-width: 28rem
-  }
-
-  .xl\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem
-  }
-
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px
   }
 }
 

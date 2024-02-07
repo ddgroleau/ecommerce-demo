@@ -388,7 +388,11 @@ header ul li:last-child a:hover {
 .product__container #tab-description {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
+}
+
+.product__container #tab-description p {
+  line-height: 1.5rem;
 }
 
 .product__container #tab-description br {
@@ -414,6 +418,7 @@ header ul li:last-child a:hover {
 .product__container .woocommerce-product-details__short-description {
   font-size: large;
   padding-block: 1rem;
+  line-height: 1.5rem;
 }
 
 .product__container .related.products .price {
@@ -446,4 +451,45 @@ header ul li:last-child a:hover {
   .product__container .onsale {
     margin-top: 1rem;
   }
+}
+
+/* CART */
+
+.wp-block-woocommerce-cart.alignwide {
+  margin: auto;
+  border-radius: 32px;
+  margin-top: min(6rem, 25%);
+  padding: min(2rem, 2.5%) min(4rem, 5%);
+  background-color: white;
+}
+
+.wp-block-woocommerce-empty-cart-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-block: 2rem;
+}
+
+.wp-block-woocommerce-empty-cart-bloc h2 {
+  padding-bottom: 2rem;
+}
+
+.wp-block-separator.has-alpha-channel-opacity.is-style-dots {
+  display: none !important;
+}
+
+.wc-block-grid__products {
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
+}
+
+/* CHECKOUT */
+
+.wp-block-woocommerce-checkout.alignwide.wc-block-checkout {
+  margin: min(6rem, 20%) auto;
+  border-radius: 32px;
+  padding: min(2rem, 5%) min(4rem, 5%);
+  background-color: white;
+  max-width: 1280px;
 }
